@@ -1,0 +1,38 @@
+package shop.calolink.entity;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import shop.calolink.Category;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "food")
+@Getter @Setter
+public class Food {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    // nullable: @NotNull이랑 비슷하다고 지금은 생각하고
+    // 차이점 궁금하면 따로 알아보기.
+    @Column(length = 20, nullable = false)
+    private String name;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20, nullable = false)
+    private Category category;
+
+    @Column(length = 20, nullable = false)
+    private String manufacturer;
+
+    @OneToMany (
+            mappedBy = "food",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Nutrition> nutritions = new ArrayList<>();
+
+}
