@@ -28,6 +28,9 @@ public class Food {
     @Column(length = 20, nullable = false)
     private String manufacturer;
 
+    @Column(length = 255)
+    private String imageUrl;
+
     @OneToMany (
             mappedBy = "food",
             cascade = CascadeType.ALL,
