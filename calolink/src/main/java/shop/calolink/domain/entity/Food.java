@@ -1,18 +1,18 @@
 package shop.calolink.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import shop.calolink.Category;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
 @Table(name = "food")
-@Getter @Setter
 public class Food {
-
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -37,5 +37,7 @@ public class Food {
             orphanRemoval = true
     )
     private List<Nutrition> nutritions = new ArrayList<>();
-
 }
+
+
+
