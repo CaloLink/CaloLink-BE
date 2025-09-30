@@ -2,6 +2,8 @@ package shop.calolink.domain.entity;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "nutrition")
 public class Nutrition {
