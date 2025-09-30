@@ -2,16 +2,14 @@ package shop.calolink.domain.entity;
 
 import jakarta.persistence.*;
 
-import java.math.BigDecimal;
-
 @Entity
 @Table(name = "nutrition")
 public class Nutrition {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "food_id", nullable = false)
+    @OneToOne(fetch = FetchType.LAZY, optional = false)   // ManyToOne -> OneToOne
+    @JoinColumn(name = "food_id", nullable = false, unique = true)   // unique 추가. unique로 1:1 보장
     private Food food;
 
     @Column(nullable = false, precision = 6, scale = 1)

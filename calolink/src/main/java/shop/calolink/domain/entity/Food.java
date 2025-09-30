@@ -4,9 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import shop.calolink.Category;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -31,12 +28,12 @@ public class Food {
     @Column(length = 255)
     private String imageUrl;
 
-    @OneToMany (
+    @OneToOne (
             mappedBy = "food",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    private List<Nutrition> nutritions = new ArrayList<>();
+    private Nutrition nutrition;
 }
 
 
