@@ -13,26 +13,26 @@ public class Nutrition {
     private Food food;
 
     @Column(nullable = false, precision = 6, scale = 1)
-    private double kcal;
+    private Double kcal;
 
     @Column(nullable = false, precision = 6, scale = 1)
-    private double protein;
+    private Double protein;
 
     @Column(nullable = false, precision = 6, scale = 1)
-    private double fat;
+    private Double fat;
 
     @Column(nullable = false, precision = 6, scale = 1)
-    private double carb;
+    private Double carb;
 
     @Column(nullable = false, precision = 6, scale = 1)
-    private double sugar;
+    private Double sugar;
 
     @Column(nullable = false, precision = 6, scale = 1)
-    private double cholesterol;
+    private Double cholesterol;
 
     @Column(nullable = false, precision = 6, scale = 1)
-    private double saturatedFat;
+    private Double saturatedFat;
 
     @Column(nullable = false, precision = 6, scale = 1)
-    private double transFat;
+    private Double transFat;
 }
