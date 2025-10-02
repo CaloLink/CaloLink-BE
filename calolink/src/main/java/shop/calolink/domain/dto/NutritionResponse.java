@@ -8,5 +8,6 @@ public record NutritionResponse(
         Double sugar,
         Double cholesterol,
         Double saturatedFat,
-        Double transFat
+        Double transFat,
+        Double sodium
 ) {}
