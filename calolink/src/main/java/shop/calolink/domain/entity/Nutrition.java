@@ -12,27 +12,30 @@ public class Nutrition {
     @JoinColumn(name = "food_id", nullable = false, unique = true)   // unique 추가. unique로 1:1 보장
     private Food food;
 
-    @Column(nullable = false, precision = 6, scale = 1)
+    @Column(nullable = false)
     private Double kcal;
 
-    @Column(nullable = false, precision = 6, scale = 1)
+    @Column(nullable = false)
     private Double protein;
 
-    @Column(nullable = false, precision = 6, scale = 1)
+    @Column(nullable = false)
     private Double fat;
 
-    @Column(nullable = false, precision = 6, scale = 1)
+    @Column(nullable = false)
     private Double carb;
 
-    @Column(nullable = false, precision = 6, scale = 1)
+    @Column(nullable = false)
     private Double sugar;
 
-    @Column(nullable = false, precision = 6, scale = 1)
+    @Column(nullable = false)
     private Double cholesterol;
 
-    @Column(nullable = false, precision = 6, scale = 1)
+    @Column(nullable = false)
     private Double saturatedFat;
 
-    @Column(nullable = false, precision = 6, scale = 1)
+    @Column(nullable = false)
     private Double transFat;
+
+    @Column(nullable = false)
+    private Double sodium;
 }

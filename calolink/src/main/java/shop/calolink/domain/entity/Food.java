@@ -25,7 +25,7 @@ public class Food {
     @Column(length = 20, nullable = false)
     private String manufacturer;
 
-    @Column(length = 255)
+    @Column(length = 255, nullable = false)
     private String imageUrl;
 
     @OneToOne (
