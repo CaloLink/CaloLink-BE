@@ -9,6 +9,6 @@ public record FoodDetailResponse(
         String name,
         String manufacturer,
         Category category,
-        List<NutritionResponse> nutritionResponse
+        NutritionResponse nutritionResponse
 ) {}
 
