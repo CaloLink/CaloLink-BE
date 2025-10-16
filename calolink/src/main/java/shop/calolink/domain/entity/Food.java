@@ -8,6 +8,7 @@ import shop.calolink.Category;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@Builder
 @Table(name = "food")
 public class Food {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,15 +26,20 @@ public class Food {
     @Column(length = 20, nullable = false)
     private String manufacturer;
 
-    @Column(length = 255, nullable = false)
+    @Column(nullable = false)
     private String imageUrl;
 
     @OneToOne (
-            mappedBy = "food",
+//            mappedBy = "food",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
+    @JoinColumn(name = "nutrition_id")
     private Nutrition nutrition;
+
+    public void setNutrition(Nutrition nutrition) {
+        this.nutrition = nutrition;
+    }
 }
 
 

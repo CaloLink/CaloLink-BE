@@ -1,19 +1,25 @@
 package shop.calolink.domain.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "nutrition")
 public class Nutrition {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)   // ManyToOne -> OneToOne
-    @JoinColumn(name = "food_id", nullable = false, unique = true)   // unique 추가. unique로 1:1 보장
-    private Food food;
+//    양방향 매핑 -> 단방향 매핑
+//    @OneToOne(fetch = FetchType.LAZY, optional = false)   // ManyToOne -> OneToOne
+//    @JoinColumn(name = "food_id", nullable = false, unique = true)   // unique 추가. unique로 1:1 보장
+//    private Food food;
 
     @Column(nullable = false)
-    private Double kcal;
+    private Integer kcal;
 
     @Column(nullable = false)
     private Double protein;
@@ -37,5 +43,5 @@ public class Nutrition {
     private Double transFat;
 
     @Column(nullable = false)
-    private Double sodium;
+    private Integer sodium;
 }
