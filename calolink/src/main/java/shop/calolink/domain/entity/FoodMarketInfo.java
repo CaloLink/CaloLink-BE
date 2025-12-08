@@ -15,15 +15,15 @@ import lombok.NoArgsConstructor;
 public class FoodMarketInfo {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-
-    private String link; // 구매 링크
-
-    private int price;   // 현재 가격 (나중에 업데이트 가능)
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "food_id")
     private Food food;
+
+    private String link; // 구매 링크
+
+    private Integer price;   // 현재 가격 (나중에 업데이트 가능)
 
     public void updatePrice(int price) {
         this.price = price;

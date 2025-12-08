@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import shop.calolink.Category;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,7 +27,7 @@ public class Food {
     private Category category;
 
     @Column(length = 20)
-    private String manufacturer = "롯데";
+    private String manufacturer;
 
     @Column(nullable = false)
     private String imageUrl;
@@ -32,12 +35,16 @@ public class Food {
     @OneToOne (
 //            mappedBy = "food",
             cascade = CascadeType.ALL,
-            orphanRemoval = true
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
     )
     @JoinColumn(name = "nutrition_id", nullable = false)
     private Nutrition nutrition;
 
-
+    // mappedBy = "food": FoodMarketInfo 엔티티에 있는 'food' 필드가 주인이라는 뜻
+    @OneToMany(mappedBy = "food", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @Builder.Default
+    private List<FoodMarketInfo> marketInfos = new ArrayList<>();
 
 //    /**
 //     * 이미지 URL을 업데이트하는 메소드
