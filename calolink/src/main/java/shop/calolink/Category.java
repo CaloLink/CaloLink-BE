@@ -8,5 +8,6 @@ public enum Category {
     DRINKS,
     COFFEE_TEA,
     HEALTH,
-    ZERO
+    ZERO,
+    ETC
 }
