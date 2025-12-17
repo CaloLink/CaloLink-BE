@@ -14,7 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.support.PageableExecutionUtils;
 import org.springframework.stereotype.Repository;
-import shop.calolink.Category;
+import shop.calolink.domain.enums.Category;
 import shop.calolink.domain.entity.Food;
 import shop.calolink.domain.entity.QFood;
 import shop.calolink.domain.entity.QNutrition;

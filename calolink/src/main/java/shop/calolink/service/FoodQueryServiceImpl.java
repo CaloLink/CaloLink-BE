@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import shop.calolink.Category;
+import shop.calolink.domain.enums.Category;
 import shop.calolink.domain.converter.FoodConverter;
 import shop.calolink.domain.dto.res.FoodResDto;
 import shop.calolink.domain.entity.Food;

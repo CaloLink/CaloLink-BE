@@ -1,8 +1,7 @@
 package shop.calolink.domain.dto.res;
 
 import lombok.Builder;
-import shop.calolink.Category;
-import shop.calolink.domain.entity.FoodMarketInfo;
+import shop.calolink.domain.enums.Category;
 
 import java.util.List;
 

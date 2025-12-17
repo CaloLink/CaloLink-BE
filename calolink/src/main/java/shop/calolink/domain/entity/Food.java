@@ -2,7 +2,7 @@ package shop.calolink.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import shop.calolink.Category;
+import shop.calolink.domain.enums.Category;
 
 import java.util.ArrayList;
 import java.util.List;

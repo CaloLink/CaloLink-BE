@@ -1,4 +1,4 @@
-package shop.calolink;
+package shop.calolink.domain.enums;
 
 public enum Category {
     NOODLES,

@@ -5,7 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import shop.calolink.Category;
+import shop.calolink.domain.enums.Category;
 import shop.calolink.domain.dto.res.FoodResDto;
 import shop.calolink.global.apiPayload.ApiResponse;
 

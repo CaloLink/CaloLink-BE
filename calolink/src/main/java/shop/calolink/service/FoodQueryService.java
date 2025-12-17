@@ -1,7 +1,7 @@
 package shop.calolink.service;
 
 import org.springframework.data.domain.Pageable;
-import shop.calolink.Category;
+import shop.calolink.domain.enums.Category;
 import shop.calolink.domain.dto.res.FoodResDto;
 
 public interface FoodQueryService {
