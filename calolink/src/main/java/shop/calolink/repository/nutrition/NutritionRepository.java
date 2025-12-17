@@ -1,4 +1,4 @@
-package shop.calolink.repository;
+package shop.calolink.repository.nutrition;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import shop.calolink.domain.entity.Nutrition;
